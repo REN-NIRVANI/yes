@@ -58,7 +58,7 @@ body {
 }
 
 .gif_container {
-    display: flex;
+    display: cover;
     justify-content: center;
     align-items: center;
 }
@@ -102,3 +102,4 @@ body {
         font-size: 14px;
     }
 }
+
