@@ -1,63 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Valentine Page</title>
-    <link rel="stylesheet" href="./style.css">
-    <style>
-        body {
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .gif_container img {
-            width: 300px;
-            margin-top: 50px;
-        }
-
-        .buttons {
-            margin-top: 30px;
-        }
-
-        .btn {
-            padding: 10px 20px;
-            font-size: 18px;
-            margin: 10px;
-            cursor: pointer;
-        }
-
-        #noButton {
-            position: absolute;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="gif_container">
-        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGhsMWhhdDhoYnlyNjFvZWc4ZjlsMnloOGdueW90dDU1a3hoY2liZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vDhDcIEmShbUI/giphy.gif" 
-             alt="Cute GIF">
-    </div>
-
-    <div class="buttons">
-        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-        <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
-    </div>
-
-    <script>
-        function nextPage() {
-            window.location.href = "yes.html";
-        }
-
-        function moveButton() {
-            var button = document.getElementById('noButton');
-            var x = Math.random() * (window.innerWidth - button.offsetWidth);
-            var y = Math.random() * (window.innerHeight - button.offsetHeight);
-
-            button.style.left = `${x}px`;
-            button.style.top = `${y}px`;
-        }
-    </script>
-
-</body>
+    <head>
+        <link rel="stylesheet" href="./style.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Do you wanna go out with me?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="data:image/jpeg;base64,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" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
 </html>
