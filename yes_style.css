@@ -1,17 +1,47 @@
+/* Body with crimson red background */
 body {
     margin: 0;
     height: 100vh;
-    overflow: hidden; /* prevents scroll */
+    overflow: hidden;
+    background-color: rgb(181, 26, 58); /* Crimson red */
+    font-family: 'Nunito', sans-serif;
 }
 
+/* Full-screen GIF background */
 .gif_container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    z-index: -1;           /* Behind everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .gif_container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* makes image fill without distortion */
+    object-fit: contain;    /* Fit GIF without cropping */
     display: block;
+}
+
+/* Header text at the top */
+.header_text {
+    position: absolute;
+    top: 20px;              /* Distance from top */
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #ffffff;        /* White text */
+    z-index: 1;            /* On top of GIF */
+}
+
+/* Responsive font for small screens */
+@media only screen and (max-width: 414px) {
+    .header_text {
+        font-size: 32px;
+    }
 }
