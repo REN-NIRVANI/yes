@@ -1,6 +1,7 @@
 body {
     margin: 0;
     height: 100vh;
+    overflow: hidden; /* prevents scroll */
 }
 
 .gif_container {
@@ -11,8 +12,6 @@ body {
 .gif_container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;   
+    object-fit: cover; /* makes image fill without distortion */
     display: block;
 }
-
-
