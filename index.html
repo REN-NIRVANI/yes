@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="stylesheet" href="./style.css">
-        
-    </head> 
-    <body>
-            <div class="gif_container">
-                <img src="https://tenor.com/view/cute-sweet-pokemon-pikachu-will-chu-be-my-valentine-gif-16326875" alt="Cute animated illustration">
-            </div>
-            <div class = "buttons">
-                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
-                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
-                <script>
-                    function nextPage() {
-                        window.location.href = "yes.html";
-                    }
-                    
-                    function moveButton() {
-                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
-                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
-                        document.getElementById('noButton').style.left = `${x}px`;
-                        document.getElementById('noButton').style.top = `${y}px`;
-                    }
-                </script> 
-            </div>
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <title>Valentine Page</title>
+</head> 
+<body>
+
+    <div class="gif_container">
+        <div class="tenor-gif-embed" 
+             data-postid="16326875" 
+             data-share-method="host" 
+             data-aspect-ratio="1" 
+             data-width="100%">
+            <a href="https://tenor.com/view/cute-sweet-pokemon-pikachu-will-chu-be-my-valentine-gif-16326875">
+                Cute Sweet GIF
+            </a> 
+            from 
+            <a href="https://tenor.com/search/cute-gifs">
+                Cute GIFs
+            </a>
         </div>
-       
-    </body> 
+    </div>
+
+    <div class="buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+        <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html";
+        }
+        
+        function moveButton() {
+            var button = document.getElementById('noButton');
+            var x = Math.random() * (window.innerWidth - button.offsetWidth);
+            var y = Math.random() * (window.innerHeight - button.offsetHeight);
+            button.style.position = "absolute";
+            button.style.left = x + "px";
+            button.style.top = y + "px";
+        }
+    </script>
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+</body> 
 </html>
+
 
